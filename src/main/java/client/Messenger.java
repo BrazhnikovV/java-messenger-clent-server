@@ -1,9 +1,9 @@
 package client;
 
-import javax.swing.*;
-import javax.swing.border.LineBorder;
 import java.awt.*;
+import javax.swing.*;
 import java.awt.event.*;
+import javax.swing.border.LineBorder;
 
 public class Messenger extends JFrame {
 
