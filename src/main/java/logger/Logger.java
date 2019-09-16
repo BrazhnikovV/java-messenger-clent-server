@@ -1,15 +1,15 @@
-package server;
+package logger;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Arrays;
+import java.util.ArrayList;
 
 /**
  * Logger - класс реализующий логирование приложения
  *
  * @version 1.0.1
- * @package jpof.lesson_3.server
+ * @package logger
  * @author  Vasya Brazhnikov
  * @copyright Copyright (c) 2018, Vasya Brazhnikov
  */
@@ -70,7 +70,7 @@ public class Logger {
         // конвертируем ArrayList в массив
         String[] arrMessages = this.massagesList.toArray( new String[this.massagesList.size()] );
 
-        String[] localArray =  null;
+        String[] localArray = new String[0];
         if ( arrMessages.length < 10 ) {
             localArray = this.copyPartArray( arrMessages, 10 - arrMessages.length );
         }

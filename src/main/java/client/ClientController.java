@@ -1,15 +1,15 @@
 package client;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Scanner;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * ClientController -
  *
  * @version 1.0.1
- * @package com.example.jcore.lesson_7.client
+ * @package client
  * @author  Vasya Brazhnikov
  * @copyright Copyright (c) 2018, Vasya Brazhnikov
  */

@@ -6,3 +6,7 @@ out/
 
 # Idea
 .idea/
+
+# Logger
+log.txt
+
