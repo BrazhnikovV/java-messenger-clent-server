@@ -146,7 +146,7 @@ public class Server {
         }
 
         this.logger.writeLog( msg );
-        this.loggerFactory.createServerLog().writeLog("Тестовое сообщение: фабрика логгеров.");
+        //this.loggerFactory.createServerLog().writeLog("Тестовое сообщение: фабрика логгеров.");
     }
 
     /**
