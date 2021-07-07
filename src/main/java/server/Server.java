@@ -1,11 +1,14 @@
 package server;
 
-import java.io.IOException;
-import java.net.ServerSocket;
-import java.net.Socket;
+import logger.Logger;
 import java.util.List;
 import java.util.Timer;
+import java.net.Socket;
 import java.util.TimerTask;
+import java.io.IOException;
+import logger.LoggerFactory;
+import java.net.ServerSocket;
+import logger.JsonLoggerFactory;
 
 /**
  * Server - класс реализующий сервер
@@ -48,12 +51,19 @@ public class Server {
     private Logger logger;
 
     /**
+     *  @access private
+     *  @var LoggerFactory loggerFactory
+     */
+    private LoggerFactory loggerFactory;
+
+    /**
      * constructor
      */
     public Server( IAuthService authService ) {
 
         // инициализируем функционал логирования приложения
         this.logger = new Logger();
+        this.loggerFactory = new JsonLoggerFactory();
 
         this.authService = authService;
 
@@ -136,6 +146,7 @@ public class Server {
         }
 
         this.logger.writeLog( msg );
+        //this.loggerFactory.createServerLog().writeLog("Тестовое сообщение: фабрика логгеров.");
     }
 
     /**
